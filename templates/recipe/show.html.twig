@@ -1,8 +1,14 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-	Recette
-	{{ slug }}
+	Recette {{ recipe.title }}
 {% endblock %}
 
-{% block body %}{% endblock %}
+{% block body %}
+<h1>{{ recipe.title }}</h1>
+<p>
+
+{{ recipe.content | nl2br }}
+Temps de la recette : {{ recipe.duration }} minutes
+</p>
+{% endblock %}
